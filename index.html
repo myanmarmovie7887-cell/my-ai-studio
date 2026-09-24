@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI Studio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: #94a3b8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .upload {
+            border: 2px dashed #475569;
+            border-radius: 15px;
+            padding: 35px 20px;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        select {
+            width: 100%;
+            padding: 14px;
+            margin: 15px 0;
+            border-radius: 10px;
+            background: #0f172a;
+            color: white;
+            border: 1px solid #475569;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .feature h3 {
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎬 My AI Studio</h1>
+    <p>Personal AI Video Workspace</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="icon">🎙️</div>
+
+        <h2>AI Transcription</h2>
+
+        <p class="description">
+            Convert your video or audio into text and subtitles.
+        </p>
+
+        <div class="upload">
+
+            <h3>Upload Video / Audio</h3>
+
+            <input type="file" accept="video/*,audio/*">
+
+        </div>
+
+        <select>
+            <option>Auto Detect Language</option>
+            <option>English</option>
+            <option>Myanmar</option>
+            <option>Chinese</option>
+            <option>Korean</option>
+            <option>Japanese</option>
+        </select>
+
+        <button>
+            START TRANSCRIPTION
+        </button>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>📝 Transcript</h3>
+                <p>Generate accurate text from your video.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🎞️ SRT</h3>
+                <p>Create subtitle files with timestamps.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🌐 Translate</h3>
+                <p>Translate your subtitles into other languages.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🔊 AI Voice</h3>
+                <p>Generate voice from your text.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
