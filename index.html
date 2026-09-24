@@ -1,127 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My AI Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<title>My AI Studio</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            min-height: 100vh;
-        }
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-        header {
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #334155;
-        }
+body{
+    font-family:Arial,sans-serif;
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+}
 
-        header h1 {
-            font-size: 28px;
-        }
+header{
+    padding:20px;
+    text-align:center;
+    border-bottom:1px solid #334155;
+}
 
-        header p {
-            margin-top: 8px;
-            color: #94a3b8;
-        }
+header h1{
+    font-size:28px;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+header p{
+    margin-top:8px;
+    color:#94a3b8;
+}
 
-        .card {
-            background: #1e293b;
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-        }
+.container{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+}
 
-        .icon {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+}
 
-        h2 {
-            margin-bottom: 10px;
-        }
+.icon{
+    font-size:55px;
+    margin-bottom:15px;
+}
 
-        .description {
-            color: #94a3b8;
-            margin-bottom: 25px;
-        }
+h2{
+    margin-bottom:10px;
+}
 
-        .upload {
-            border: 2px dashed #475569;
-            border-radius: 15px;
-            padding: 35px 20px;
-            margin-bottom: 20px;
-        }
+.description{
+    color:#94a3b8;
+    margin-bottom:25px;
+}
 
-        input[type="file"] {
-            margin-top: 20px;
-            width: 100%;
-        }
+.upload{
+    border:2px dashed #475569;
+    border-radius:15px;
+    padding:35px 20px;
+    margin-bottom:20px;
+}
 
-        select {
-            width: 100%;
-            padding: 14px;
-            margin: 15px 0;
-            border-radius: 10px;
-            background: #0f172a;
-            color: white;
-            border: 1px solid #475569;
-        }
+input[type="file"]{
+    margin-top:20px;
+    width:100%;
+}
 
-        button {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            background: #2563eb;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-        }
+select{
+    width:100%;
+    padding:14px;
+    margin:15px 0;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+    border:1px solid #475569;
+}
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 25px;
-        }
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+}
 
-        .feature {
-            background: #0f172a;
-            padding: 20px;
-            border-radius: 12px;
-        }
+button:disabled{
+    opacity:.5;
+}
 
-        .feature h3 {
-            margin-bottom: 8px;
-        }
+.status{
+    margin-top:20px;
+    color:#93c5fd;
+    white-space:pre-wrap;
+}
 
-        .feature p {
-            color: #94a3b8;
-            font-size: 14px;
-        }
+.result{
+    margin-top:20px;
+    padding:20px;
+    background:#0f172a;
+    border-radius:12px;
+    text-align:left;
+    white-space:pre-wrap;
+    line-height:1.6;
+    min-height:80px;
+}
 
-        @media (max-width: 600px) {
-            .features {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.feature{
+    background:#0f172a;
+    padding:20px;
+    border-radius:12px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+@media(max-width:600px){
+    .features{
+        grid-template-columns:1fr;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -133,64 +155,177 @@
 
 <div class="container">
 
-    <div class="card">
+<div class="card">
 
-        <div class="icon">🎙️</div>
+<div class="icon">🎙️</div>
 
-        <h2>AI Transcription</h2>
+<h2>AI Transcription</h2>
 
-        <p class="description">
-            Convert your video or audio into text and subtitles.
-        </p>
+<p class="description">
+Convert your video or audio into text.
+</p>
 
-        <div class="upload">
+<div class="upload">
 
-            <h3>Upload Video / Audio</h3>
+<h3>Upload Video / Audio</h3>
 
-            <input type="file" accept="video/*,audio/*">
-
-        </div>
-
-        <select>
-            <option>Auto Detect Language</option>
-            <option>English</option>
-            <option>Myanmar</option>
-            <option>Chinese</option>
-            <option>Korean</option>
-            <option>Japanese</option>
-        </select>
-
-        <button onclick="alert('Transcription engine is being prepared!')">
-            START TRANSCRIPTION
-        </button>
-
-        <div class="features">
-
-            <div class="feature">
-                <h3>📝 Transcript</h3>
-                <p>Generate accurate text from your video.</p>
-            </div>
-
-            <div class="feature">
-                <h3>🎞️ SRT</h3>
-                <p>Create subtitle files with timestamps.</p>
-            </div>
-
-            <div class="feature">
-                <h3>🌐 Translate</h3>
-                <p>Translate your subtitles into other languages.</p>
-            </div>
-
-            <div class="feature">
-                <h3>🔊 AI Voice</h3>
-                <p>Generate voice from your text.</p>
-            </div>
-
-        </div>
-
-    </div>
+<input
+    id="fileInput"
+    type="file"
+    accept="video/*,audio/*"
+>
 
 </div>
 
-</body>
-</html>
+<select id="language">
+    <option value="">Auto Detect Language</option>
+    <option value="english">English</option>
+    <option value="burmese">Myanmar</option>
+    <option value="chinese">Chinese</option>
+    <option value="korean">Korean</option>
+    <option value="japanese">Japanese</option>
+</select>
+
+<button id="startButton">
+START TRANSCRIPTION
+</button>
+
+<div id="status" class="status">
+Ready.
+</div>
+
+<div id="result" class="result">
+Transcript will appear here.
+</div>
+
+<div class="features">
+
+<div class="feature">
+<h3>📝 Transcript</h3>
+<p>Generate text from your video.</p>
+</div>
+
+<div class="feature">
+<h3>🎞️ SRT</h3>
+<p>Subtitle generation will be added next.</p>
+</div>
+
+<div class="feature">
+<h3>🌐 Translate</h3>
+<p>Subtitle translation will be added next.</p>
+</div>
+
+<div class="feature">
+<h3>🔊 AI Voice</h3>
+<p>AI voice will be added later.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script type="module">
+
+import { pipeline } from
+"https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.0";
+
+const fileInput = document.getElementById("fileInput");
+const startButton = document.getElementById("startButton");
+const statusBox = document.getElementById("status");
+const resultBox = document.getElementById("result");
+const languageSelect = document.getElementById("language");
+
+let transcriber = null;
+
+async function loadModel(){
+
+    if(transcriber){
+        return transcriber;
+    }
+
+    statusBox.textContent =
+        "Loading Whisper AI model...\n" +
+        "The first time may take a while.";
+
+    transcriber = await pipeline(
+        "automatic-speech-recognition",
+        "Xenova/whisper-tiny"
+    );
+
+    return transcriber;
+}
+
+async function getAudio(file){
+
+    const arrayBuffer = await file.arrayBuffer();
+
+    const audioContext = new AudioContext({
+        sampleRate:16000
+    });
+
+    const audioBuffer =
+        await audioContext.decodeAudioData(arrayBuffer);
+
+    const channelData =
+        audioBuffer.getChannelData(0);
+
+    return channelData;
+}
+
+startButton.addEventListener("click", async () => {
+
+    const file = fileInput.files[0];
+
+    if(!file){
+
+        statusBox.textContent =
+            "Please choose a video or audio file first.";
+
+        return;
+    }
+
+    startButton.disabled = true;
+
+    resultBox.textContent = "";
+
+    try{
+
+        const model = await loadModel();
+
+        statusBox.textContent =
+            "Reading your audio...\nPlease wait.";
+
+        const audio = await getAudio(file);
+
+        statusBox.textContent =
+            "Transcribing...\nDo not close this page.";
+
+        const selectedLanguage =
+            languageSelect.value;
+
+        const options = {
+            chunk_length_s:30,
+            stride_length_s:5,
+            return_timestamps:true
+        };
+
+        if(selectedLanguage){
+            options.language = selectedLanguage;
+        }
+
+        const output =
+            await model(audio, options);
+
+        resultBox.textContent =
+            output.text || "No speech detected.";
+
+        statusBox.textContent =
+            "✅ Transcription complete.";
+
+    }catch(error){
+
+        console.error(error);
+
+        statusBox.textContent =
+            "❌ Error:\n" +
